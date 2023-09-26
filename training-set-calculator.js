@@ -1,7 +1,8 @@
 const availableWeights = [20, 10, 5, 2.5, 1.25];
 const numberOfSets = 5;
 const barWeight = 20;
-const workSetWeight = 22.5;
+const workSetWeight = 90;
+const exercise = "Dead Lift";
 
 function getNecessaryWeights(desiredTotalWeight) {
   return availableWeights.reduce(
@@ -23,7 +24,7 @@ function getNecessaryWeights(desiredTotalWeight) {
 }
 
 const increment = (workSetWeight - barWeight) / (numberOfSets - 1);
-console.log({ desiredIncrement: increment });
+console.log({ exercise, desiredIncrement: increment });
 
 for (let setNumber = 0; setNumber < numberOfSets; setNumber++) {
   const necessaryWeights = getNecessaryWeights(increment * setNumber);
